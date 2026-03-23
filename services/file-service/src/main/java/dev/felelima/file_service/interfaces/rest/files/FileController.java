@@ -1,6 +1,6 @@
 package dev.felelima.file_service.interfaces.rest.files;
 
-import dev.felelima.file_service.applicatin.service.UploadRequestService;
+import dev.felelima.file_service.application.service.UploadRequestService;
 import dev.felelima.file_service.interfaces.rest.files.dto.UploadRequest;
 import dev.felelima.file_service.interfaces.rest.files.dto.UploadUrlResponse;
 import io.minio.errors.*;
@@ -24,7 +24,7 @@ public class FileController {
 
     @Operation(summary = "Request a pre-signed URL for uploading a file")
     @PostMapping("/upload-request")
-    public UploadUrlResponse requestUpload(@RequestBody @Valid UploadRequest request) throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+    public UploadUrlResponse requestUpload(@RequestBody @Valid UploadRequest request) {
         return uploadService.requestUpload(request);
     }
 }

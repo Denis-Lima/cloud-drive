@@ -1,4 +1,4 @@
-package dev.felelima.file_service.applicatin.service;
+package dev.felelima.file_service.application.service;
 
 import dev.felelima.file_service.domain.exception.FolderNotFoundException;
 import dev.felelima.file_service.domain.exception.InvalidDataException;
